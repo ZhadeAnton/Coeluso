@@ -41,7 +41,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/favicon.ico'),
+          from: path.resolve(__dirname, 'src/img'),
           to: path.resolve(__dirname, 'dist'),
         },
       ],
@@ -65,6 +65,10 @@ module.exports = {
             presets: ['@babel/preset-env'],
           },
         },
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: ['file-loader'],
       },
     ],
   },

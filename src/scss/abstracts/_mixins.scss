@@ -1,0 +1,34 @@
+@mixin icon($color: #fff) {
+    padding: 3px;
+    position: relative;
+    display: inline-block;
+    color: $color;
+    & span {
+        font-size: 18px;
+    }
+
+    &:active, &.active {
+        color: $color;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexVerticalCenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexJustifySB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
