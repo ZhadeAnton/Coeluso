@@ -47,8 +47,7 @@
         }
 
         &--btn {
-            font-size: 1.8rem;
-            color: $color-white;
+            @include button(white);
         }
     }
 }

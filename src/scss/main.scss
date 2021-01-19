@@ -1,5 +1,6 @@
 @import "abstracts/variables";
-@import "abstracts/mixins";
+@import "abstracts/mixins/configMixins";
+@import "abstracts/mixins/componentMixins";
 
 @import "base/base";
 @import "sections/header";
