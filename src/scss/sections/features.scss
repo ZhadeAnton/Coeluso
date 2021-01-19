@@ -1,4 +1,76 @@
 .features {
-    background-color: pink;
-    grid-column: full-start / full-end;
+    grid-column: center-start / center-end;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    &__botline {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        background-image: url('features-phone.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    &__image {
+        position: absolute;
+        top: 64%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    &__title {
+        display: flex;
+        margin-top: 13rem;
+
+        font-size: 4.8rem;
+        color: $color-white;
+
+        span {
+            color: $brand-blue-light-2;
+        }
+
+        p {
+            display: inline-block;
+        }
+    }
+
+    &__wrapper {
+
+        &--left {
+
+        }
+
+        &--right {
+
+        }
+    }
+
+    &__item {  // Iteem features
+        display: grid;
+        grid-template-columns: minmax(min-content, 42rem);
+        grid-template-rows: minmax(min-content, 8rem) repeat(2, min-content);
+
+        &--icon {
+        }
+
+        &--title {
+            color: $color-white;
+            font-size: 2.4rem;
+            line-height: 3.5rem;
+        }
+
+        &--desc {
+            color: $color-grey-light-1;
+            font-size: 1.4rem;
+            line-height: 3.5rem;
+        }
+    }
 }

@@ -1,21 +1,4 @@
-@mixin icon($color: #fff) {
-    padding: 3px;
-    position: relative;
-    display: inline-block;
-    color: $color;
-    & span {
-        font-size: 18px;
-    }
-
-    &:active, &.active {
-        color: $color;
-    }
-
-    &:hover {
-        cursor: pointer;
-    }
-}
-
+// Flex mixins
 @mixin flexCenter {
     display: flex;
     align-items: center;
@@ -32,3 +15,5 @@
     justify-content: space-between;
     align-items: center;
 }
+
+// Grid mixins
