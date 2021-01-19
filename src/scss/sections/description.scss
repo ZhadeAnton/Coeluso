@@ -1,0 +1,13 @@
+.description {
+
+    &__image {
+        background-color: red;
+        grid-column: full-start / col-start 7;
+    }
+
+    &__text {
+        background-color: yellow;
+        grid-column: col-start 7 / col-end 12;
+        color: red;
+    }
+}
