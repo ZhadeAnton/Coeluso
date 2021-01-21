@@ -12,22 +12,42 @@
     <div class="container">
 
         <div class="header">
-            <div class="header__topline">
-                <div class="header__topline--logo-wrap">
-                    <img src="logo.png" class="header__topline--svg" alt="company's logo">
+            <div class="overlay has-fade"></div>
+            <div class="header__topline flex flex-jc-sb flex-ai-c">
+                
+                <div class="header__topline--logo-wrap flex flex-ai-c">
+                    <img src="logo.svg" class="header__topline--svg" alt="company's logo">
                     <div class="header__topline--name logo-name">Coeluso</div>
                 </div>
 
-                <span class="material-icons header__topline--menu">
-                    menu
-                </span>
+                <ul class="header__topline--links flex header-links hide-for-mobile">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+
+                <nav class="header__topline--hamburger hide-for-desctop">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </nav>
+
+                <div class="header__menu has-fade">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                </div>
             </div>
 
             <div class="header__botline">
-                <p class="header__botline--title heading-white">
+                <p class="header__botline--title heading-white text-center">
                     <span class="heading-blue">Coeluso</span> is free PSD template
                 </p>
-                <p class="header__botline--desc">
+                <p class="header__botline--desc text-center">
                     Coeluso is free PSD template with clean fonts and elegant Music
                 </p>
                 <a href="#" class="header__botline--btn">
@@ -36,10 +56,10 @@
             </div>
         </div>
 
-        <!-- <section class="pictures">
-            pictures
+         <section class="pictures">
+            <img src="" alt="" class="pictures--image">
         </section>
-
+        <!--
         <div class="description__image">image</div>
         <div class="description__text">lot of text</div>
  
