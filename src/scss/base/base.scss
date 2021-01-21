@@ -8,17 +8,35 @@
     box-sizing: inherit;
 }
 
+a, a:visited, a:active {
+    text-decoration: none;
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px/16px -> 1rem = 10px
 }
 
 body {
-    color: $color-white;
     background-color: $brand-primary;
     font-family: $font-primary;
-    width: 100%;
+    font-size: $clamped-medium-font;
+    color: $color-grey-light-1;
     font-weight: 400;
+    width: 100%;
+
+    &.noscroll {
+        overflow: hidden;
+    }
+
+    ::selection {
+        color: $brand-red-main;
+    }
 }
 
 .container {
@@ -28,3 +46,40 @@ body {
     grid-template-columns: [full-start] minmax(4rem,1fr) [center-start] repeat(12, [col-start] minmax(min-content, 12.5rem) [col-end]) [center-end] minmax(4rem,1fr) [full-end];
 }
 
+.flex {
+    display: flex;
+
+    &-center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.has-fade {
+    visibility: hidden;
+}
+
+// Visibility
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none; 
+    }
+}
+
+.hide-for-desctop {
+    @include breakpoint-up(large) {
+        display: none; 
+    }
+}

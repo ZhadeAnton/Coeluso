@@ -3,11 +3,22 @@ $brand-primary: #0a2345;
 $brand-blue-light-1: #2a5da3; // Head desc
 $brand-blue-light-2: #2e66b2; // 
 $brand-blue-light-3: #143a6b; // Button border
-
 $color-grey-light-1: #66778e;
-
 $brand-red-main: #ff3334;
 $color-white: #fff;
+
+/* Font Sizes */
+$font-small: 1.4rem;
+$font-medium: 1.8rem;
+$font-big: 2.2rem;
+$font-large: 4.8rem;
+
+$clamped-medium-font: clamp(1.4rem, 1.1000rem + 0.8333vw, 1.8rem);
+$clamped-menu-font: clamp(1.8rem, 1.5000rem + 0.8333vw, 2.2rem);
+$clamped-heading-font: clamp(2.1rem, 0.0750rem + 5.6250vw, 4.8rem);
+
+;
+
 /* Text */
 $font-primary: 'Montserrat', sans-serif;
 
