@@ -1,4 +1,50 @@
 .pictures {
-    background-color: brown;
+    width: 100%;
     grid-column: full-start / full-end;
+    background-image: url('@/img/volume.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: minmax(28rem, max-content) minmax(29rem, max-content) minmax(28rem, max-content);
+    grid-template-rows: max-content;
+    justify-content: center;
+    grid-column-gap: clamp(3rem, 2vw, 5rem);
+    padding: 0 5rem;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+
+    &--1 {
+    }
+
+    &--2 {
+        transform: scale(1.1) translateY(-1rem);
+    }
+
+    &--3 {
+    }
+
+    @include breakpoint-down('medium') {
+        grid-template-columns: minmax(14rem, max-content) minmax(15rem, max-content) minmax(14rem, max-content);
+        padding: 0px 1rem;
+        grid-column-gap: clamp(3rem, 6vw, 10rem);
+
+        &--1 {
+            transform: translate(40%, 6%);
+        }
+
+        &--2 {
+            transform: translate(0%, -10%);
+            z-index: 10;
+        }
+
+        &--3 {
+            transform: translate(-40%, 5%);
+        }
+    }
 }

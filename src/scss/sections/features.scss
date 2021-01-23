@@ -1,51 +1,48 @@
 .features {
     grid-column: center-start / center-end;
 
-    display: grid;
-    grid-template-rows: minmax(min-content, 25rem) min-content;
-
-    &__botline {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        height: 80vh;
-
-        background-image: url('@/img/features-phone.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    &__image {
-        position: absolute;
-        top: 64%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-    }
-
-    &__item {  // Item features
+    &__info {
         display: grid;
-        grid-template-columns: minmax(min-content, 44rem);
-        grid-template-rows: minmax(min-content, 8rem) repeat(2, min-content);
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: clamp(1rem, 3vw, 3rem);
+        width: 100%;
 
-        margin-bottom: 6rem;
+        @include breakpoint-down('small') {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-rows: repeat(2, min-content) 1fr;
+        grid-template-columns: minmax(min-content, 50rem);
+        grid-row-gap: 2rem;
+
+        @include breakpoint-down('small') {
+            display: grid;
+            grid-template-rows: min-content max-content;
+            grid-template-columns: min-content 1fr;
+            grid-gap: 1rem 2rem;
+            align-items: center;
+        }
 
         &--icon {
+            img {
+                width: 5.4rem;
+                height: 5.4rem;
+            }
+            
         }
 
         &--title {
             color: $color-white;
-            font-size: 2.4rem;
-            line-height: 3.5rem;
+            font-size: $font-big;
         }
 
         &--desc {
-            color: $color-grey-light-1;
-            font-size: 1.6rem;
-            line-height: 3.5rem;
+            @include breakpoint-down('small') {
+                grid-column: 1 / 3;
+            }
         }
     }
 }

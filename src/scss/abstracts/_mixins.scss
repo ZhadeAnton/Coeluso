@@ -15,10 +15,13 @@
 @mixin button($color: #fff) {
     border: 1px solid $brand-blue-light-2;
     color: $color;
+    display: inline-block;
     font-size: clamp(1.1rem, 0.8750rem + 0.6250vw, 1.4rem);
     font-weight: 600;
     padding: 1.8rem 3.1rem;
+    min-width: 20rem;
     border-radius: 500px;
+    text-align: center;
 }
 
 // Media queries
@@ -30,7 +33,7 @@
 $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "80em");
 
 // 639px, 1023px, 1399px
-$breakpoints-down: ("small": "39.9375m","medium": "63.9375em", "large": "87.4375em");
+$breakpoints-down: ("small": "39.9375em","medium": "63.9375em", "large": "87.4375em");
 
 @mixin breakpoint-up($size) {
     @media (min-width: map-get($breakpoints-up, $size)) {
