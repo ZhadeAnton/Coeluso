@@ -55,7 +55,7 @@
 
         &--title {
             color: $color-white;
-            font-size: $font-big;
+            font-size: $clamped-menu-font;
         }
 
         &--desc {

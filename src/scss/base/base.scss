@@ -37,6 +37,10 @@ body {
     ::selection {
         color: $brand-red-main;
     }
+
+    @include breakpoint-down('medium') {
+        color: $color-grey-light-2;
+    }
 }
 
 .container {
@@ -54,8 +58,16 @@ body {
         align-items: center;
     }
 
+    &-column {
+        flex-direction: column;
+    }
+
     &-jc-sb {
         justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
     }
 
     &-ai-c {
@@ -87,16 +99,32 @@ body {
 // Measures
 .mb-sm {
     margin-bottom: 3rem;
+
+    @include breakpoint-down('medium') {
+        margin-bottom: 1.5rem;
+    }
 }
 
 .mb-md {
-   margin-bottom: 6rem; 
+   margin-bottom: 6rem;
+
+   @include breakpoint-down('medium') {
+    margin-bottom: 4rem;
+}
 }
 
 .mb-bg {
     margin-bottom: 10rem;
+
+    @include breakpoint-down('medium') {
+        margin-bottom: 6rem;
+    }
 }
 
 .mb-lg {
     margin-bottom: 16rem;
+
+    @include breakpoint-down('medium') {
+        margin-bottom: 9rem;
+    }
 }
