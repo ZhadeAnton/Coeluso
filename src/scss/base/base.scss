@@ -42,7 +42,7 @@ body {
 .container {
     width: 100%;
     display: grid;
-    grid-template-rows: repeat(6, min-content) 100vh min-content;
+    // grid-template-rows: repeat(6, min-content) 100vh min-content;
     grid-template-columns: [full-start] minmax(4rem,1fr) [center-start] repeat(12, [col-start] minmax(min-content, 12.5rem) [col-end]) [center-end] minmax(4rem,1fr) [full-end];
 }
 
@@ -74,7 +74,7 @@ body {
 // Visibility
 .hide-for-mobile {
     @include breakpoint-down(medium) {
-        display: none; 
+        display: none;
     }
 }
 
@@ -82,4 +82,17 @@ body {
     @include breakpoint-up(large) {
         display: none; 
     }
+}
+
+// Measures
+.mb-sm {
+    margin-bottom: 3rem;
+}
+
+.mb-md {
+   margin-bottom: 6rem; 
+}
+
+.mb-lg {
+    margin-bottom: 10rem;
 }
