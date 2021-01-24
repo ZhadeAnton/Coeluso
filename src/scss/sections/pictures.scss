@@ -35,7 +35,7 @@
         grid-column-gap: clamp(3rem, 6vw, 10rem);
 
         &--1 {
-            transform: translate(40%, 6%);
+            transform: translate(70%, 6%);
         }
 
         &--2 {
@@ -44,7 +44,7 @@
         }
 
         &--3 {
-            transform: translate(-40%, 5%);
+            transform: translate(-70%, 5%);
         }
     }
 }
