@@ -2,8 +2,8 @@
     grid-column: center-start / full-end;
     width: 100%;
     position: relative;
-    margin-top: 30rem;
-    height: 45vh;
+    margin-top: 20rem;
+    height: 70vh;
     overflow: hidden;
 
     display: grid;
@@ -11,11 +11,17 @@
 
     @include breakpoint-down('medium') {
         grid-column: full-start / full-end;
-        margin-top: 0;
+        margin-top: 10rem;
+        height: 50vh;
+    }
+
+    @include breakpoint-down('small') {
+        margin-top: 1rem;
+        height: 30vh;
     }
     
     &__info {
-        grid-column: 1 / 7;
+        grid-column: 1 / 6;
         max-width: 66rem;
         padding: 1rem;
 
@@ -44,7 +50,7 @@
     }
 
     &__image {
-        grid-column: 7 / -1;
+        grid-column: 6 / -1;
         background-image: url('@/img/prespective-img.png');
         background-repeat: no-repeat;
         background-position: right center;
