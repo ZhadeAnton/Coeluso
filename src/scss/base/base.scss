@@ -37,10 +37,6 @@ body {
     ::selection {
         color: $brand-red-main;
     }
-
-    @include breakpoint-down('medium') {
-        color: $color-grey-light-2;
-    }
 }
 
 .container {
@@ -48,6 +44,16 @@ body {
     display: grid;
     // grid-template-rows: repeat(6, min-content) 100vh min-content;
     grid-template-columns: [full-start] minmax(4rem,1fr) [center-start] repeat(12, [col-start] minmax(min-content, 12.5rem) [col-end]) [center-end] minmax(4rem,1fr) [full-end];
+
+    line-height: 3.5rem;
+
+    @include breakpoint-down('medium') {
+        line-height: 2.9rem;
+    }
+
+    @include breakpoint-down('small') {
+        line-height: 2rem;
+    }
 }
 
 .flex {
@@ -105,19 +111,51 @@ body {
     }
 }
 
-.mb-md {
+.mb-6 {
    margin-bottom: 6rem;
 
    @include breakpoint-down('medium') {
     margin-bottom: 4rem;
-}
+    }
+
+    @include breakpoint-down('small') {
+    margin-bottom: 2rem;
+    }
 }
 
-.mb-bg {
+.mb-8 {
+    margin-bottom: 8rem;
+ 
+    @include breakpoint-down('medium') {
+     margin-bottom: 6rem;
+     }
+ 
+     @include breakpoint-down('small') {
+     margin-bottom: 4rem;
+     }
+ }
+
+.mb-10 {
     margin-bottom: 10rem;
 
     @include breakpoint-down('medium') {
-        margin-bottom: 6rem;
+        margin-bottom: 7rem;
+    }
+
+    @include breakpoint-down('small') {
+        margin-bottom: 4rem;
+    }
+}
+
+.mb-12 {
+    margin-bottom: 12rem;
+
+    @include breakpoint-down('medium') {
+        margin-bottom: 7rem;
+    }
+
+    @include breakpoint-down('small') {
+        margin-bottom: 3rem;
     }
 }
 
