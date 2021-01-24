@@ -31,6 +31,10 @@
     padding: 3rem 0 clamp(4rem, 10vw, 20vw) 0;
     z-index: 100;
 
+    &--nav {
+        @include links-hover("header__topline--link", $color-white, 3rem, $last-child-margin: true);
+    }
+
     &--hamburger {
         span {
             display: block;
@@ -49,42 +53,6 @@
     &--svg {
         width: clamp(5.5rem, 8.5rem, 10vw);
         height: clamp(4.5rem, 7.5rem, 10vw);
-    }
-
-    &--links {
-
-        a {
-            color: $color-white;
-            position: relative;
-            opacity: .80;
-            transition: opacity .2s ease-in;
-
-            &::before {
-                content: "";
-                display: block;
-                position: absolute;
-                height: 5px;
-                left: 0;
-                right: 0;
-                bottom: -2rem;
-                background-color: $brand-red-main;
-                z-index: 10;
-                opacity: 0;
-                transition: opacity .2s ease-in;
-            }
-
-            &:hover {
-                opacity: 1;
-
-                &::before {
-                    opacity: 1;
-                }
-            }
-        }
-
-        li:not(:last-child) {
-            margin-right: 4rem;
-        }
     }
 }
 

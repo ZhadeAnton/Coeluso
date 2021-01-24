@@ -68,8 +68,16 @@ body {
         flex-direction: column;
     }
 
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
     &-jc-sb {
         justify-content: space-between;
+    }
+
+    &-jc-sa {
+        justify-content: space-around;
     }
 
     &-jc-c {

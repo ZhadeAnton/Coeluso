@@ -1,3 +1,24 @@
 .footer {
     grid-column: center-start / center-end;
+    min-height: 15rem;
+    width: 100%;
+    padding: 2rem 0;
+    border-top: 1px solid rgb(172, 115, 115);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+
+    &__nav {
+        @include links-hover("footer__nav--link", $color-white, 3rem, $last-child-margin: true); 
+
+        & > * {
+            padding: 1rem;
+        }
+    }
+
+    &__copyright {
+        justify-self: end;
+    }
 }
