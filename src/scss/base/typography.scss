@@ -2,8 +2,17 @@
     font-size: $clamped-heading-font;
     letter-spacing: 0.2rem;
     font-weight: 400;
+    line-height: 6rem;
     color: $color-white;
     align-self: center;
+
+    @include breakpoint-down('medium') {
+        line-height: 5rem;
+    }
+
+    @include breakpoint-down('small') {
+        line-height: 3.9rem;
+    }
 }
 
 .heading-white {
@@ -14,6 +23,20 @@
     @extend %heading;
     font-weight: 600 !important;
     color: $brand-blue-light-1;
+}
+
+.sub-title {
+    font-size: $clamped-sub-title;
+    color: $color-white;
+    line-height: 4.8rem;
+
+    @include breakpoint-down('medium') {
+        line-height: 4rem;
+    }
+
+    @include breakpoint-down('small') {
+        line-height: 3.2rem;
+    }
 }
 
 .logo-name {

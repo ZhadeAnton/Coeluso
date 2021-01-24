@@ -30,11 +30,6 @@
             height: 5.4rem;
         }
 
-        &--title {
-            font-size: $clamped-presp-title;
-            color: $color-white;
-        }
-
         @include breakpoint-down('medium') {
             padding: 0 4rem;
             grid-column: 1 / -1;
