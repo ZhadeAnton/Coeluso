@@ -32,7 +32,7 @@
     z-index: 100;
 
     &--nav {
-        @include links-hover("header__topline--link", $color-white, 3rem, $last-child-margin: true);
+        @include links-hover("header__topline--link", $color-white, 3rem);
     }
 
     &--hamburger {

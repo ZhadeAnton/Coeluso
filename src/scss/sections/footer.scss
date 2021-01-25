@@ -1,24 +1,55 @@
 .footer {
     grid-column: center-start / center-end;
-    min-height: 15rem;
     width: 100%;
     padding: 2rem 0;
     border-top: 1px solid rgb(172, 115, 115);
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-    align-items: center;
+
+    @include breakpoint-down('medium') {
+        grid-template-columns: repeat(auto-fit);
+        grid-template-rows: repeat(2, min-content);
+
+        &__nav {
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: min-content;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        &__copyright {
+            text-align: center;
+        }
+    }
+
+    @include breakpoint-up('large') {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: min-content;
+        padding: 4rem 0;
+
+        &__nav {
+            a {
+                &:not(:last-child) {
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+        &__copyright {
+            justify-self: end;
+        }
+    }
 
     &__nav {
-        @include links-hover("footer__nav--link", $color-white, 3rem, $last-child-margin: true); 
+        @include links-hover("footer__nav--link", $color-white, 3rem);
 
-        & > * {
-            padding: 1rem;
+        a {
+            line-height: 3rem;
         }
     }
 
     &__copyright {
-        justify-self: end;
+
     }
 }

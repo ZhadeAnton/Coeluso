@@ -24,7 +24,7 @@
     text-align: center;
 }
 
-@mixin links-hover($name, $color, $margin-right, $last-child-margin: true) {
+@mixin links-hover($name, $color, $margin-right) {
     .#{$name} {
             display: inline-block;
             color: $color;
@@ -32,14 +32,6 @@
             opacity: .80;
             transition: opacity .2s ease-in;
             text-align: center;
-
-            @if $last-child-margin {
-                &:not(:last-child) {
-                    margin-right: #{$margin-right};
-                }   
-            } @else {
-                margin-right: #{$margin-right};
-            }
          
         &::before {
             content: "";
