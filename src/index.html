@@ -20,13 +20,13 @@
                     <div class="header__topline--name logo-name">Coeluso</div>
                 </div>
 
-                <ul class="header__topline--links flex header-links hide-for-mobile">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
+                <div class="header__topline--nav flex header-links hide-for-mobile">
+                    <a class="header__topline--link" href="#">Home</a>
+                    <a class="header__topline--link" href="#">About</a>
+                    <a class="header__topline--link" href="#">Contact</a>
+                    <a class="header__topline--link" href="#">Blog</a>
+                    <a class="header__topline--link" href="#">Careers</a>
+                </div>
 
                 <nav class="header__topline--hamburger hide-for-desctop">
                     <span></span>
@@ -35,7 +35,7 @@
                 </nav>
 
                 <div class="header__menu has-fade">
-                    <a href="#">Home</a>
+                    <a class="header__topline--link" href="#">Home</a>
                     <a href="#">About</a>
                     <a href="#">Contact</a>
                     <a href="#">Blog</a>
@@ -47,7 +47,7 @@
                 <p class="header__botline--title heading-white text-center">
                     <span class="heading-blue">Coeluso</span> is free PSD template
                 </p>
-                <p class="header__botline--desc text-center mb-sm">
+                <p class="header__botline--desc text-center mb-3">
                     Coeluso is free PSD template with clean fonts and elegant Music
                 </p>
                 <a href="#" class="header__botline--btn">
@@ -65,12 +65,12 @@
     <section class="description mb-10">
         <div class="description__image"></div>
         <div class="description__info">
-            <div class="description__info--title text-center mb-sm">
+            <div class="description__info--title text-center mb-3">
                 <p class="description__info--title heading-white">
                     <span class="heading-blue">Coeluso</span> is free PSD template
                 </p>
             </div>
-            <div class="description__info--desc mb-sm">
+            <div class="description__info--desc mb-3">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti id veniam aliquam,
                     perferendis odit ab aliquid commodi ea modi quae architecto eum consequuntur officiis
@@ -86,7 +86,7 @@
     <section class="features mb-10">
         <div class="features--bg"></div>
 
-        <div class="features__title heading-white mb-lg text-center">
+        <div class="features__title heading-white mb-16 text-center">
             <span class="heading-blue">Coeluso </span> with a lot of features
         </div>
 
@@ -146,8 +146,8 @@
 
     <section class="prespective">
         <div class="prespective__info flex flex-column flex-jc-c">
-            <img src="plug.svg" class="prespective__info--icon mb-sm">
-            <div class="prespective__info--title sub-title mb-sm">Lorem ipsum dolor sit amet</div>
+            <img src="plug.svg" class="prespective__info--icon mb-3">
+            <div class="prespective__info--title sub-title mb-3">Lorem ipsum dolor sit amet</div>
             <p class="prespective__info--text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus deserun 
                 inventore fugit. Velit vero repellendus, quaerat laboriosam quidem deserunt nihil!
@@ -157,7 +157,7 @@
     <div class="prespective__image"></div>
     </section>
 
-    <section class="slider flex flex-jc-c mb-lg">
+    <section class="slider flex flex-jc-c mb-16">
         <div class="slider--wrapper flex flex-jc-c">
             <div class="slider__item flex flex-column flex-center text-center">
                 <div class="slider__item--text mb-6">
@@ -218,25 +218,15 @@
     </section>
 
     <footer class="footer">
-        <ul class="footer__nav">
-            <li class="footer__nav--item">
+        <div class="footer__nav">
                 <a href="#" class="footer__nav--link">Homepage</a>
-            </li>
-            <li class="footer__nav--item">
                 <a href="#" class="footer__nav--link">Service</a>
-            </li>
-            <li class="footer__nav--item">
                 <a href="#" class="footer__nav--link">About us</a>
-            </li>
-            <li class="footer__nav--item">
                 <a href="#" class="footer__nav--link">Contact</a>
-            </li>
-        </ul>
-        <div class="footer__copyright">
-            <p>
+        </div>
+            <p class="footer__copyright">
                 Copyright &copy; 2021 All rights reserved by Zhade Anton
             </p>
-        </div>
     </footer>
     </div>
 </body>
