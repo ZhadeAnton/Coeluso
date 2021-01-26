@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px/16px -> 1rem = 10px
+}
+
+body {
+    background: rgb(10,35,69);
+    background: linear-gradient(180deg, rgbargb(145, 145, 145)gba(9,23,41,1) 100%);
+    font-family: $font-primary;
+    font-size: $clamped-medium-font;
+    color: $color-grey-light-1;
+    font-weight: 400;
+    width: 100%;
+
+    &.noscroll {
+        overflow: hidden;
+    }
+
+    ::selection {
+        background-color: $brand-red-main;
+        color: $color-white;
+    }
+}
+
+.container { // Main container with grid layout
+    width: 100%;
+    display: grid;
+    grid-template-columns: [full-start] minmax(4rem,1fr) [center-start] repeat(12, [col-start] minmax(min-content, 12.5rem) [col-end]) [center-end] minmax(4rem,1fr) [full-end];
+
+    line-height: 3.5rem;
+
+    @include breakpoint-down('medium') {
+        line-height: 2.9rem;
+    }
+
+    @include breakpoint-down('small') {
+        line-height: 2rem;
+    }
+}
+
+/* / Visibility /  */ 
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desctop {
+    @include breakpoint-up(large) {
+        display: none; 
+    }
+}
+
+/* / Supports classes / */
+
+.flex { // I'm not sure with this decision but it's realy help *sometimes
+    display: flex;
+
+    &-center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-column {
+        flex-direction: column;
+    }
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-sa {
+        justify-content: space-around;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.has-fade { // I loop over this class and show / hide elements
+    visibility: hidden;
+}
+
+/* / Margins /  */ 
+.mb-section {
+    margin-bottom: clamp(8rem, 10vw, 16rem);
+}
+
+.mb-big {
+    margin-bottom: clamp(5.5rem, 10vw, 11rem);
+}
+
+.mb-medium {
+    margin-bottom: clamp(3rem, 10vw, 6rem);
+}
+
+.mb-small {
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+}

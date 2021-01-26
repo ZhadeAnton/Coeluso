@@ -17,8 +17,8 @@
     }
 
     &__info {
-        padding: 12rem 2rem;
         grid-column:  7 / 12;
+        padding: 3rem;
 
         &--btn {
             @include button($color-white);

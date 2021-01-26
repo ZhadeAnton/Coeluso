@@ -2,7 +2,6 @@
     grid-column: center-start / full-end;
     width: 100%;
     position: relative;
-    margin-top: 20rem;
     height: 70vh;
     overflow: hidden;
 
@@ -11,12 +10,9 @@
 
     @include breakpoint-down('medium') {
         grid-column: full-start / full-end;
-        margin-top: 10rem;
-        height: 50vh;
     }
 
     @include breakpoint-down('small') {
-        margin-top: 1rem;
         height: 30vh;
     }
     
@@ -26,8 +22,8 @@
         padding: 1rem;
 
         &--icon {
-            width: 5.4rem;
-            height: 5.4rem;
+            width: $clamped-svg-width;
+            height: $clamped-svg-height;
         }
 
         @include breakpoint-down('medium') {

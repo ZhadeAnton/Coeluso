@@ -42,14 +42,10 @@
     }
 
     &__nav {
-        @include links-hover("footer__nav--link", $color-white, 3rem);
+        @include links-hover("footer__nav--link", $color-white);
 
         a {
             line-height: 3rem;
         }
-    }
-
-    &__copyright {
-
     }
 }

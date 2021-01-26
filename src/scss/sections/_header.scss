@@ -6,33 +6,18 @@
     display: grid;
     grid-template-rows: repeat(2, min-content);
 
-    &.open {
-        .header__topline--hamburger {
-            z-index: 10000;
-            > span:first-child {
-                transform: rotate(45deg);
-            }
-    
-            > span:nth-child(2) {
-                opacity: 0;
-            }
-    
-            > span:last-child {
-                transform: rotate(-45deg);
-            }
-        }
-
-        .overlay {
-            visibility: visible;
-        }
-    }
-
    &__topline {
-    padding: 3rem 0 clamp(4rem, 10vw, 20vw) 0;
+    padding-top: 3rem;
     z-index: 100;
 
     &--nav {
-        @include links-hover("header__topline--link", $color-white, 3rem);
+        @include links-hover("header__topline--link", $color-white);
+
+        a {
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+        }
     }
 
     &--hamburger {
@@ -90,12 +75,35 @@
            color: $brand-red-main;
            display: block;
            font-size: $clamped-menu-font;
+           animation: fadeInRight .5s ease forwards;
+        animation-delay: 1.35s;
 
            &:not(:last-child) {
                margin-bottom: 2.2rem;
            }
        }
    }
+
+   &.open {
+    .header__topline--hamburger {
+        z-index: 10000;
+        > span:first-child {
+            transform: rotate(45deg);
+        }
+
+        > span:nth-child(2) {
+            opacity: 0;
+        }
+
+        > span:last-child {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .overlay {
+        visibility: visible;
+    }
+}
 }
 
 .overlay {

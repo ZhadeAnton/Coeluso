@@ -1,22 +1,29 @@
 /* Colors */
 $brand-primary: #0a2345;
-$brand-blue-light-1: #2a5da3; // Head desc
-$brand-blue-light-2: #2e66b2; // 
-$brand-blue-light-3: #143a6b; // Button border
+$brand-blue-light-1: #2a5da3;
+$brand-blue-light-2: #2e66b2;
+$brand-blue-light-3: #143a6b;
 $color-grey-light-1: #66778e;
 $color-grey-light-2: #c0d2eb;
 $brand-red-main: #ff3334;
 $color-white: #fff;
 
-/* Font Sizes */
-
+/* Clamped Font Sizes */
 $clamped-medium-font: clamp(1.4rem, 1.1000rem + 0.8333vw, 1.8rem);
 $clamped-menu-font: clamp(1.8rem, 1.5000rem + 0.8333vw, 2.2rem);
 $clamped-heading-font: clamp(2.1rem, 0.0750rem + 5.6250vw, 4.8rem);
 $clamped-sub-title: clamp(2.8rem, 2.2000rem + 1.6667vw, 3.6rem);
+$clamped-logo-font: clamp(1.1rem, 0.3500rem + 2.0833vw, 2.1rem);
+
+/* Clamped svg's size */
+$clamped-svg-width: clamp(4.1rem, 8vw, 5.4rem);
+$clamped-svg-height: clamp(4.1rem, 8vw, 5.4rem);
 
 /* Text */
 $font-primary: 'Montserrat', sans-serif;
 
 /* Measures */
 $container-width: 147rem;
+
+/* Shadow */
+$box-shadow: -1px 1px 19px 3px rgba(44,38,38,0.63);
